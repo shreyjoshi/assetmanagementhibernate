@@ -348,6 +348,14 @@ public class EmployeeController {
 	       ModelAndView mv=new ModelAndView("assetTransfer");
 	       ArrayList<Tansfer> list=ed.viewTransferRequest(username,status);
 			mv.addObject("List", list);
+		       int status1=0;
+		       ArrayList<Tansfer> list1=ed.viewTransferRequest(username,status1);
+		       int status2=3;
+		       ArrayList<Tansfer> list2=ed.viewTransferRequest2(username,status2);
+
+		       mv.addObject("List1",list1);
+				mv.addObject("List2",list2);
+				
 			mv.addObject("askmsg","ask request approved");
 			return mv;
 	       }
@@ -356,6 +364,14 @@ public class EmployeeController {
 		       ModelAndView mv=new ModelAndView("assetTransfer");
 		       ArrayList<Tansfer> list=ed.viewTransferRequest(username,status);
 				mv.addObject("List", list);
+				 int status1=0;
+			       ArrayList<Tansfer> list1=ed.viewTransferRequest(username,status1);
+			       int status2=3;
+			       ArrayList<Tansfer> list2=ed.viewTransferRequest2(username,status2);
+
+			       mv.addObject("List1",list1);
+					mv.addObject("List2",list2);
+
 				mv.addObject("askmsg","ask request rejected");
 				return mv;
 	       }
